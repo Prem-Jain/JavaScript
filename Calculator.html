@@ -1,0 +1,128 @@
+<html>
+<style>
+* {
+  box-sizing: border-box;
+  padding: 10px;
+}
+
+input[type=number]{
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  resize: vertical;
+}
+
+label {
+  padding: 12px 12px 12px 0;
+  display: inline-block;
+  font-weight: 700;
+}
+
+input[type=button] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 50px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  width: 19.7%
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+.form-container {
+  border-radius: 5px;
+  background-color: #f2f2f2;
+  padding: 20px;
+}
+
+.col-25 {
+  float: left;
+  width: 25%;
+  margin-top: 6px;
+}
+
+.col-75 {
+  float: left;
+  width: 75%;
+  margin-top: 6px;
+}
+
+/* Clear floats after the columns */
+.row::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+</style>
+<script type="text/javascript">
+	function add(){
+		var val1 = document.getElementById("val1").value;
+		var val2 = document.getElementById("val2").value;
+		document.getElementById("res").value = parseInt(val1) + parseInt(val2);
+	}
+	function sub(){
+		var val1 = document.getElementById("val1").value;
+		var val2 = document.getElementById("val2").value;
+		document.getElementById("res").value = val1 - val2;
+	}
+	function mul(){
+		var val1 = document.getElementById("val1").value;
+		var val2 = document.getElementById("val2").value;
+		document.getElementById("res").value = val1 * val2;
+	}
+	function div(){
+		var val1 = document.getElementById("val1").value;
+		var val2 = document.getElementById("val2").value;
+		document.getElementById("res").value = val1 / val2;
+	}
+	function pow(){
+		var val1 = document.getElementById("val1").value;
+		var val2 = document.getElementById("val2").value;
+		document.getElementById("res").value = Math.pow(val1, val2);
+	}
+</script>
+<body>
+	<h1 style="text-align:center">Calculator Application</h1>
+	<form class="form-container">
+		<div class="row">
+			<div class="col-25">
+				<label name="val1">Enter Value 1</label>
+			</div>
+			<div class="col-75">			
+				<input id="val1" name="val1" type="number">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-25">
+				<label name="val2">Enter Value 2</label>
+			</div>
+			<div class="col-75">
+				<input id="val2" name="val2" type="number">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<div class="col-25">
+				<label name="res">Result of values</label>
+			</div>
+			<div class="col-75">
+				<input id="res" name="res" type="number">
+			</div>
+		</div>
+		<br>
+		<div class="row">
+			<input type="button" value="Add" onClick="add()">
+			<input type="button" value="Subtract" onClick="sub()">
+			<input type="button" value="Multiply" onClick="mul()">
+			<input type="button" value="Divide" onClick="div()">
+			<input type="button" value="Power" onClick="pow()">
+		</div>
+	</form>
+</body>
+</html>
