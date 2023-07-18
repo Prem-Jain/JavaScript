@@ -1,0 +1,13 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <p>Current Time : <span id="time"></span></p>
+        <script>
+            var today = new Date();
+            var hr = today.getHours();
+            var min = today.getMinutes();
+            var sec = today.getSeconds();
+            document.getElementById("time").innerHTML = hr +  " : " + min + " : " + sec;
+        </script>
+    </body>
+</html>

@@ -1,0 +1,25 @@
+<html>
+    <body>
+        <h1>Ways to create an Object in JS</h1>
+        <script>  
+            emp={id:102, name:"Shyam Kumar", salary:40000}  
+            document.write(emp.id + " " + emp.name + " " + emp.salary + "<br>");  
+        </script>
+        <script>  
+            var emp=new Object();  
+            emp.id = 101;  
+            emp.name = "Ravi Malik";  
+            emp.salary = 50000;  
+            document.write(emp.id + " " + emp.name + " " + emp.salary + "<br>");  
+        </script>
+        <script>
+            function emp(id,name,salary){  
+                this.id = id;  
+                this.name = name;  
+                this.salary = salary;  
+            }
+            e=new emp(103, "Vimal Jaiswal", 30000);
+            document.write(e.id + " " + e.name + " " + e.salary);  
+        </script>
+    </body>
+</html>

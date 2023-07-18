@@ -1,0 +1,16 @@
+<html>
+    <body>
+        <script type="text/javascript">  
+        function getcube(){  
+        var number=document.getElementById("number").value;  
+        alert(number*number*number);  //Gives an alert message
+        document.getElementById("number").value=number*number*number;  //To replace the input value with answer
+        }  
+        </script>  
+        <form>
+            <label for="number">Enter a number</label>  
+            <input type="text" id="number" name="number"/><br/>  
+            <input type="button" value="cube" onclick="getcube()"/>  
+        </form>
+    </body>
+</html>
